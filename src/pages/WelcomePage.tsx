@@ -16,7 +16,7 @@ const WelcomePage = () => {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-gradient-slate to-gradient-green bg-[length:400%_400%] animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-br  bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 via-transparent to-green-950 pointer-events-none bg-[length:400%_400%] animate-pulse" />
 
       {/* Floating orbs for visual interest */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 rounded-full bg-primary/10 blur-3xl animate-pulse" />
@@ -27,14 +27,14 @@ const WelcomePage = () => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           {/* Logo/Icon */}
-          <div className="animate-fade-in mb-8">
+          <div className="animate-in mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-2xl shadow-primary/20 animate-bounce">
               <FileText className="w-10 h-10 md:w-12 md:h-12 text-primary" />
             </div>
           </div>
 
           {/* Title */}
-          <h1 className="animate-fade-in text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 [animation-delay:0.2s]">
+          <h1 className="animate-in text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 [animation-delay:0.2s]">
             <span className="text-foreground">Markdown</span>
             <span className="text-primary"> Preview</span>
           </h1>
@@ -76,14 +76,14 @@ const WelcomePage = () => {
           </div>
 
           {/* Additional info */}
-          <p className="animate-fade-in mt-8 text-sm text-muted-foreground/70 [animation-delay:0.6s]">
+          <p className="animate-in mt-8 text-sm text-muted-foreground/70 [animation-delay:0.6s]">
             Built with React & TypeScript • Fast & Lightweight
           </p>
         </div>
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-gray-900 via-transparent to-green-950 pointer-events-none animate-pulse" />
     </div>
   );
 };

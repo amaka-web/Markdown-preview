@@ -18,17 +18,17 @@ export default function Home() {
   }, [value]);
 
   return (
-    <main className="grid md:grid-cols-2 bg-linear-to-r from-gray-600 to-green-500 px-4 py-2 bg-cover hover:from-green-700 hover:to-gray-500 gap-4 p-4">
+    <main className="grid md:grid-cols-2 bg-linear-to-t from-gray-600 via-transparent to-green-900 px-4 py-2 bg-cover hover:from-green-900 hover:to-gray-600 gap-4 p-4 min-h-screen ">
         <h1 className="mb-4 text-4xl font-bold text-foreground text-center md:col-span-2">
           Markdown <span className="text-primary">Preview</span>
         </h1>
       <section
         aria-label="Markdown Editor"
-        className="border rounded-lg text-gray-900 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out"
+        className="border-4 border-black rounded-lg text-gray-900 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out hover:scale-102"
       >
         <CodeMirror
           value={value}
-          height="70vh"
+          height="69vh"
           extensions={[markdown()]}
           onChange={setValue}
         />
@@ -36,7 +36,7 @@ export default function Home() {
 
       <section
         aria-label="Markdown Preview"
-        className=" max-w-none border p-4 rounded text-white bg-black dark:bg-black/80 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-auto h-[70vh]"
+        className=" max-w-none border-7 p-4 rounded text-white bg-black dark:bg-black/80 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out hover:scale-102 overflow-auto h-[70vh]"
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
@@ -45,7 +45,7 @@ export default function Home() {
       <div className="flex gap-3 mb-4 items-center justify-center">
         <Button
           onClick={() => saveMarkdown(value)}
-          className="cursor-pointer bg-linear-to-r from-green-600 to-green-400 px-4 py-2 rounded hover:from-green-700 hover:to-green-500"
+          className="cursor-pointer bg-linear-to-r from-green-900 to-green-700 px-4 py-2 rounded hover:from-green-800 hover:to-green-600"
         >
           Save to API
         </Button>
@@ -55,7 +55,7 @@ export default function Home() {
             const data = await loadMarkdown();
             setValue(data);
           }}
-          className="cursor-pointer bg-linear-to-l from-green-600 to-green-400 px-4 py-2 rounded hover:from-green-700 hover:to-green-500"
+          className="cursor-pointer bg-linear-to-l from-green-900 to-green-700 px-4 py-2 rounded hover:from-green-800 hover:to-green-600"
         >
           Load from API
         </Button>

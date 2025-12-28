@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
-import ErrorTest from "./pages/ErrorTest"
-import NotFound from "./pages/NotFound"
-import ErrorBoundary from "./components/ErrorBoundary"
-import WelcomePage from "./pages/WelcomePage"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+
+import NotFound from "./pages/NotFound";
+import ErrorBoundary from "./components/ErrorBoundary";
+import WelcomePage from "./pages/WelcomePage";
 
 export default function App() {
   return (
@@ -12,10 +12,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/error-test" element={<ErrorTest />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ErrorBoundary>
     </BrowserRouter>
-  )
+  );
 }

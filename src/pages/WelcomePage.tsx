@@ -55,8 +55,8 @@ const WelcomePage = () => {
           {/* CTA Button */}
           <div className="animate-fade-in [animation-delay:0.6s]">
             <Button
-              variant="hero"
-              size="xl"
+              variant="ghost"
+              size="lg"
               onClick={handleGetStarted}
               disabled={isLoading}
               className="group transition-all duration-300 hover:scale-105"
